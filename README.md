@@ -34,3 +34,31 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Setup & Usage
+
+1. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+2. **Run unit tests**
+
+   ```bash
+   npm test
+   ```
+
+3. **Using the merge function**
+
+   Import and use the function from `src/merge.ts`:
+
+   ```typescript
+   import { merge } from './src/merge';
+   const result = merge([1,3,5], [6,4,2], [0,7,8]);
+   // result: [0,1,2,3,4,5,6,7,8]
+   ```
+
+## Notes
+- The `merge` function does **not** use any sort function.
+- `collection_1` and `collection_3` must be sorted ascending, `collection_2` descending.
